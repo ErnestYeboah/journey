@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="My pPortfolio Website" />
     <title>The Portfolio</title>
-
+    <script src="js/app.js" defer></script>
     <link rel="stylesheet" href="css/styles.css" />
-    <script src=""></script>
   </head>
   <body>
     <header>
@@ -17,7 +16,11 @@
         <ul class="nav__links">
           <li><a href="/">Works</a></li>
           <li>
-            <a target="_blank" href="./assets/ErnestYeboah.pdf">Resume</a>
+            <a
+              target="_blank"
+              href="./assets/I am a React Full Stack web Developer.pdf"
+              >Resume</a
+            >
           </li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
@@ -39,43 +42,155 @@
       <section class="works">
         <h2>My Works</h2>
         <div class="works__cards">
-          <div class="card">
-            <a target="_blank" href="https://amaetonfashionhouse.vercel.app/">
-              <img src="./assets/images/storesnapshot.png" alt="" />
-              <div class="text__content">
-                <h3>Amaeton Fashion House</h3>
-                <p>
-                  A user-friendly e-commerce web app with simple and sleek look
-                  and layout for users to quickly and easily navigate and place
-                  orders.
-                </p>
+          <div class="card amf">
+            <img src="./assets/images/storesnapshot.png" alt="" />
+
+            <div
+              class="text__content"
+              onclick="openDetailedCardModal('details_card_ouside_wrapper')"
+            >
+              <h3>Amaeton Fashion House</h3>
+              <p>
+                A user-friendly e-commerce web app with simple and sleek look
+                and layout for users to quickly and easily navigate and place
+                orders.
+              </p>
+            </div>
+
+            <div class="details_card_ouside_wrapper">
+              <div class="amf_details_card">
+                <div class="status_bar">
+                  <h2>Amaeton Fashion House</h2>
+                  <a
+                    target="_blank"
+                    href="https://amaetonfashionhouse.vercel.app"
+                    >Click here to view full page</a
+                  >
+                  <button
+                    onclick="closeDetailedCardModal('details_card_ouside_wrapper')"
+                    class="close_btn"
+                  >
+                    X
+                  </button>
+                </div>
+                <div class="figure_wrapper">
+                  <figure>
+                    <img
+                      src="assets/images/Screenshot 2025-09-30 103020.png"
+                      alt=""
+                    />
+                    <img
+                      src="assets/images/Screenshot 2025-09-30 103036.png"
+                      alt=""
+                    />
+                    <img
+                      src="assets/images/Screenshot 2025-09-30 103311.png"
+                      alt=""
+                    />
+                    <img
+                      src="assets/images/Screenshot 2025-09-30 103328.png"
+                      alt=""
+                    />
+                    <img
+                      src="assets/images/Screenshot 2025-10-06 101103.png"
+                      alt=""
+                    />
+                  </figure>
+                </div>
+
+                <div class="btns">
+                  <button onclick="slideLeft('figure')"><</button>
+                  <button onclick="slideRight('figure')">></button>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
           <div class="card card__two">
-            <a target="_blank" href="https://stormtrivia.vercel.app/">
-              <img src="./assets/images/triviaclip.png" alt="" />
-              <div class="text__content">
-                <h3>Storm Trivia</h3>
-                <p>
-                  A quiz app/game with a sleek layout and appearance purposely
-                  built for education and to release stress.
-                </p>
+            <img src="./assets/images/triviaclip.png" alt="" />
+            <div
+              class="text__content"
+              onclick="openDetailedCardModal('wrapper_two')"
+            >
+              <h3>Storm Trivia</h3>
+              <p>
+                A quiz app/game with a sleek layout and appearance purposely
+                built for education and to release stress.
+              </p>
+            </div>
+
+            <div class="details_card_ouside_wrapper wrapper_two">
+              <div class="amf_details_card">
+                <div class="status_bar">
+                  <h2>Storm Trivia</h2>
+                  <a target="_blank" href="https://stormtrivia.vercel.app"
+                    >Click here to view full page</a
+                  >
+                  <button
+                    onclick="closeDetailedCardModal('wrapper_two')"
+                    class="close_btn"
+                  >
+                    X
+                  </button>
+                </div>
+                <div class="figure_wrapper">
+                  <figure class="figure_2">
+                    <img src="assets/images/stormtrivia1.png" alt="" />
+                    <img src="assets/images/stormtrivia2.png" alt="" />
+                    <img src="assets/images/stormtrivia3.png" alt="" />
+                    <img src="assets/images/stormtrivia4.png" alt="" />
+                  </figure>
+                </div>
+
+                <div class="btns">
+                  <button onclick="slideLeft('.figure_2')"><</button>
+                  <button onclick="slideRight('.figure_2')">></button>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
+
           <div class="card card__three">
-            <a target="_blank" href="">
-              <img loading="lazy" src="/assets/images/windows3.png" alt="" />
-              <div class="text__content">
-                <h3>Windows 10 Clone</h3>
-                <p>
-                  A windows 10 system clone with few but many features where
-                  users must provide their username before continuing.It has the
-                  best lockscreen appearance and also comes with some web apps.
-                </p>
+            <img loading="lazy" src="/assets/images/windows3.png" alt="" />
+            <div
+              class="text__content"
+              onclick="openDetailedCardModal('wrapper_three')"
+            >
+              <h3>Windows 10 Clone</h3>
+              <p>
+                A windows 10 system clone with few but many features where users
+                must provide their username before continuing.It has the best
+                lockscreen appearance and also comes with some web apps.
+              </p>
+            </div>
+
+            <div class="details_card_ouside_wrapper wrapper_three">
+              <div class="amf_details_card">
+                <div class="status_bar">
+                  <h2>Windows 10 Clone</h2>
+                  <a target="_blank" href="https://e-windows.vercel.app/"
+                    >Click here to view full page</a
+                  >
+                  <button
+                    onclick="closeDetailedCardModal('wrapper_three')"
+                    class="close_btn"
+                  >
+                    X
+                  </button>
+                </div>
+                <div class="figure_wrapper">
+                  <figure class="figure_3">
+                    <img src="assets/images/windows3.png" alt="" />
+                    <img src="assets/images/widonws1.png" alt="" />
+                    <img src="assets/images/windows5.png" alt="" />
+                  </figure>
+                </div>
+
+                <div class="btns">
+                  <button onclick="slideLeft('.figure_3')"><</button>
+                  <button onclick="slideRight('.figure_3')">></button>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>
