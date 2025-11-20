@@ -14,7 +14,7 @@ function checkSlideContainerState(el) {
   const figureselides = document.querySelectorAll(`${el} > * `);
   if (currentIndex <= 0) {
     currentIndex = 0;
-  } else if (currentIndex >= figureselides.length - 1) {
+  } else if (currentIndex > figureselides.length - 1) {
     currentIndex = figureselides.length - 1;
   }
 }
